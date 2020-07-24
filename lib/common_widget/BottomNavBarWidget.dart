@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/main.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
+  Function navigateToScreens;
+
+  BottomNavBarWidget({@required this.navigateToScreens});
   @override
   _BottomNavBarWidgetState createState() => _BottomNavBarWidgetState();
 }
@@ -12,11 +14,11 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
   Widget build(BuildContext context) {
     int _selectedIndex = 0;
     void _onItemTapped(int index) {
+      print(index);
       setState(() {
         _selectedIndex = index;
-        navigateToScreens(index);
+        widget.navigateToScreens(index);
       });
-
     }
 
     return BottomNavigationBar(

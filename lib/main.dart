@@ -4,11 +4,8 @@ import 'package:flutter_ecommerce_app/common_widget/AppBarWidget.dart';
 import 'package:flutter_ecommerce_app/common_widget/BottomNavBarWidget.dart';
 import 'package:flutter_ecommerce_app/common_widget/DrawerWidget.dart';
 import 'package:flutter_ecommerce_app/screens/HomeScreen.dart';
-import 'package:flutter_ecommerce_app/screens/ProductDetailScreen.dart';
 import 'package:flutter_ecommerce_app/screens/ShoppingCartScreen.dart';
 import 'package:flutter_ecommerce_app/screens/WishListScreen.dart';
-import 'package:flutter_ecommerce_app/components/AppSignIn.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,18 +24,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
-int currentIndex = 0;
-
-void navigateToScreens(int index) {
-  currentIndex = index;
-}
-
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageNewState createState() => _MyHomePageNewState();
 }
 
 class _MyHomePageNewState extends State<MyHomePage> {
+  int currentIndex = 0;
+
+  void navigateToScreens(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
   final List<Widget> viewContainer = [
     HomeScreen(),
     WishListScreen(),
@@ -57,7 +56,9 @@ class _MyHomePageNewState extends State<MyHomePage> {
           index: currentIndex,
           children: viewContainer,
         ),
-        bottomNavigationBar: BottomNavBarWidget(),
+        bottomNavigationBar: BottomNavBarWidget(
+          navigateToScreens: navigateToScreens,
+        ),
       ),
     );
   }
