@@ -4,6 +4,7 @@ import 'package:flutter_ecommerce_app/common_widget/AppBarWidget.dart';
 import 'package:flutter_ecommerce_app/common_widget/BottomNavBarWidget.dart';
 import 'package:flutter_ecommerce_app/common_widget/DrawerWidget.dart';
 import 'package:flutter_ecommerce_app/screens/HomeScreen.dart';
+import 'package:flutter_ecommerce_app/screens/LoginScreen.dart';
 import 'package:flutter_ecommerce_app/screens/ShoppingCartScreen.dart';
 import 'package:flutter_ecommerce_app/screens/WishListScreen.dart';
 
@@ -42,7 +43,7 @@ class _MyHomePageNewState extends State<MyHomePage> {
     HomeScreen(),
     WishListScreen(),
     ShoppingCartScreen(),
-    HomeScreen()
+    LoginScreen()
   ];
 
   @override
