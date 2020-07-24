@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "975598446271",
+    "firebase_url": "https://phone-auth-example-71447.firebaseio.com",
+    "project_id": "phone-auth-example-71447",
+    "storage_bucket": "phone-auth-example-71447.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975598446271:android:88d0b2f40759800e2c480a",
+        "android_client_info": {
+          "package_name": "com.phantomzone.flutter_ecommerce_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975598446271-91ahs9jq9edta0jficmonp9ae0u01jsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5hF9LBiPY_JG3Y9b4b0nwuH992wMEBzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975598446271-91ahs9jq9edta0jficmonp9ae0u01jsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
